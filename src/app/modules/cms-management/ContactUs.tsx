@@ -44,78 +44,12 @@ const ContactUs = () => {
       sortKey: "_createdAt",
     };
 
-    // Dummy data for Contact Us inquiries
-    const dummyInquiries = [
-      {
-        _id: "1",
-        user: {
-          firstName: "John",
-          lastName: "Murphy",
-          email: "john.murphy@example.com",
-        },
-        _createdAt: new Date(Date.now() - 5 * 24 * 60 * 60 * 1000).toISOString(), // 5 days ago
-        content: "I would like to inquire about ticket availability for the upcoming Feed My Cycle Championship match. Can you please provide information on pricing and seating options?",
-      },
-      {
-        _id: "2",
-        user: {
-          firstName: "Sarah",
-          lastName: "O'Connor",
-          email: "sarah.oconnor@example.com",
-        },
-        _createdAt: new Date(Date.now() - 3 * 24 * 60 * 60 * 1000).toISOString(), // 3 days ago
-        content: "I'm interested in volunteering for community events. How can I get involved with the Feed My Cycle GAA community programs?",
-      },
-      {
-        _id: "3",
-        user: {
-          firstName: "Michael",
-          lastName: "Walsh",
-          email: "michael.walsh@example.com",
-        },
-        _createdAt: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString(), // 2 days ago
-        content: "I have a question regarding the fixture schedule. When will the next round of matches be announced?",
-      },
-      {
-        _id: "4",
-        user: {
-          firstName: "Emma",
-          lastName: "Byrne",
-          email: "emma.byrne@example.com",
-        },
-        _createdAt: new Date(Date.now() - 1 * 24 * 60 * 60 * 1000).toISOString(), // 1 day ago
-        content: "I would like to report an issue with the mobile app. The live scores feature is not updating correctly during matches.",
-      },
-      {
-        _id: "5",
-        user: {
-          firstName: "David",
-          lastName: "Ryan",
-          email: "david.ryan@example.com",
-        },
-        _createdAt: new Date(Date.now() - 12 * 60 * 60 * 1000).toISOString(), // 12 hours ago
-        content: "I'm looking for information about youth coaching programs in my area. Can you provide details about registration and schedules?",
-      },
-      {
-        _id: "6",
-        user: {
-          firstName: "Lisa",
-          lastName: "Kelly",
-          email: "lisa.kelly@example.com",
-        },
-        _createdAt: new Date(Date.now() - 6 * 60 * 60 * 1000).toISOString(), // 6 hours ago
-        content: "I have a suggestion for improving the match day experience. Would it be possible to add more food vendors at the stadium?",
-      },
-    ];
-    setInquiries(dummyInquiries);
-    setTotalRecords(dummyInquiries.length);
-
-    // const apiService = new APICallService(CMS.GET_CONTACT_US, params);
-    // const response = await apiService.callAPI();
-    // if (response && response.records) {
-    //   setInquiries(response.records);
-    //   setTotalRecords(response.total);
-    // }
+    const apiService = new APICallService(CMS.GET_CONTACT_US, params);
+    const response = await apiService.callAPI();
+    if (response && response.records) {
+      setInquiries(response.records);
+      setTotalRecords(response.total);
+    }
     setLoading(false);
   };
 
@@ -171,7 +105,7 @@ const ContactUs = () => {
           <h1 className="fs-22 fw-bolder">{ContactString.title}</h1>
         </Col>
       </Row>
-      
+
       <Col xs={12}>
         <Card className="bg-light border mb-7">
           <Card.Body className="px-7">
@@ -208,9 +142,6 @@ const ContactUs = () => {
               <table className="table table-rounded table-row-bordered align-middle gy-4">
                 <thead>
                   <tr className="fw-bold fs-16 fw-600 text-dark border-bottom h-70px align-middle">
-                    <th className="min-w-250px ">
-                      {commonString.name}
-                    </th>
                     <th className="min-w-350px ">{commonString.email}</th>
                     <th className="min-w-150px">
                       {ContactString.receivedOn}
@@ -232,19 +163,9 @@ const ContactUs = () => {
                       (inquiryVal: any, inquiryIndex: number) => (
                         <tr key={inquiryIndex}>
                           <td>
-                            <div className="d-flex align-items-center gap-2">
-
-                              <div className="d-flex flex-column">
-                                <span className="fs-15 fw-500">
-                                  {inquiryVal.user.firstName + " " + inquiryVal.user.lastName}
-                                </span>
-                              </div>
-                            </div>
-                          </td>
-                          <td>
                             <div >
                               <span className="fs-15 fw-600 text-dark">
-                                {inquiryVal.user.email || "-"}
+                                {inquiryVal.email || "-"}
                               </span>
                             </div>
                           </td>

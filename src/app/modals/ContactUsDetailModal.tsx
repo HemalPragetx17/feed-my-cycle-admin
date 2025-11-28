@@ -66,7 +66,7 @@ const ContactUsDetailModal: React.FC<ContactUsDetailModalProps> = ({
                 }}
               >
                 <p className="fs-15 text-dark fw-500 mb-0">
-                  {data?.content || "No comment provided"}
+                  {data?.message || "No comment provided"}
                 </p>
               </div>
             </div>
