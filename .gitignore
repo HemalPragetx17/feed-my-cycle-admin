@@ -38,3 +38,4 @@ Thumbs.db
 .idea/
 # Unit test reports
 TEST*.xml
+dist/
