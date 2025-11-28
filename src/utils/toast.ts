@@ -1,0 +1,92 @@
+export const Auth = {
+  login: 'Yay! You are Logged in successfully',
+  optSent: 'Hurray! OTP sent to your registered email successfully!',
+};
+export const masterToast = {
+  addBrand: 'Yay! Brand details added successfully!',
+  editBrand: 'Success! Brand details updated successfully!',
+  deleteBrand: 'Done! Brand details deleted successfully!',
+  addPrimaryCategory: 'Great job! Primary category added successfully!',
+  editPrimaryCategory: 'Awesome! Primary category updated successfully!',
+  addSubCategory: 'Fantastic! Sub category added successfully!',
+  deleteCategory: 'Done! Category deleted successfully!',
+  editSubCategory: 'Superb! Sub category updated successfully!',
+  addGroupCategory: 'Exciting news! Group category added successfully!',
+  editGroupCategory: 'Amazing! Group category updated successfully!',
+  addVariant: 'Woohoo! Product variant added successfully!',
+  editVariant: 'Good news! Product variant updated successfully!',
+  deleteSubcategoryVariant:
+    'Say goodbye! Sub category variant deleted successfully!',
+  deletedVariant: 'Farewell! Variant deleted successfully!',
+  addRoles: 'Kudos! Roles & permission added successfully!',
+  editRole: 'Bravo! Roles & permission updated successfully!',
+  deleteRole: 'Farewell! Roles & permission deleted successfully!',
+  addUserManagement: 'Welcome aboard! User added successfully!',
+  editUserManagement: 'Success! User updated successfully!',
+  addDeliveryUser: 'New member! Delivery user added successfully!',
+  editDeliveryUser: 'Updated! Delivery user details updated successfully!',
+  deleteDeliveryUser: 'Oh-ho! Delivery user deleted successfully!',
+  activatedDeliveryUser: 'Activated! Delivery user activated successfully!',
+  deactivatedDeliveryUser:
+    'Deactivated! Delivery user deactivated successfully!',
+  loadingAreaSaved: 'Success! Loading area details saved successfully.',
+  userActivated: 'Cheers! User activated successfully!',
+  userDeactivated: 'Quiet time! User deactivated successfully!',
+  userDeleted: 'Goodbye! User deleted successfully!',
+  userUpdated: 'Update success! User details updated successfully!',
+  selectRoles:
+    'No permission selected. Please choose at least one to move forward',
+  productZoneAdded: 'Success! Product zone added successfully.',
+  productZoneUpdated: 'Success! Product zone details saved successfully.',
+  productZoneDeleted: 'Done! Product zone deleted successfully!',
+  addPicker: 'New member! Picker added successfully!',
+  editPicker: 'Updated! Picker details updated successfully!',
+  deletePicker: 'Oh-ho! Picker deleted successfully!',
+  activatedPicker: 'Activated! Picker activated successfully!',
+  deactivatedPikcer: 'Deactivated! Picker deactivated successfully!',
+};
+export const customerToast = {
+  activated: 'Activated! Customer activated successfully!',
+  deactivated: 'Uh-oh! Customer Deactivated successfully!',
+  reviewDeleted: 'Review deleted successfully!',
+  reviewHides: 'Review hidden successfully!',
+  reviewShows: 'Review is displayed successfully!',
+};
+export const blogToast = {
+  blogAdded: 'Done! Blog added successfully!',
+  blogDrafted: 'Saved! Blog details saved as a draft!',
+  blogUpdated: 'Updated! Blog updated successfully!',
+  blogDeleted: 'Oh-Ho! Blog deleted successfully',
+  unpublished: 'Unpublished! Blog unpublished successfully',
+  published: 'Published! Blog published successfully',
+};
+export const defaultOptionsToast = {
+  symptomAdded: 'Done! Symptom added successfully!',
+  symptomUpdated: 'Updated! Symptom updated successfully!',
+  symptomDeleted: 'Oh-Ho! Symptom deleted successfully',
+  hungerOrCravingAdded: 'Done! Hunger or craving added successfully!',
+  hungerOrCravingUpdated: 'Updated! Hunger or craving updated successfully!',
+  hungerOrCravingDeleted: 'Oh-Ho! Hunger or craving deleted successfully',
+  dischargeAdded: 'Done! Discharge added successfully!',
+  dischargeUpdated: 'Updated! Discharge updated successfully!',
+  dischargeDeleted: 'Oh-Ho! Discharge deleted successfully',
+  cycleStageAdded: 'Done! Cycle stage added successfully!',
+  cycleStageUpdated: 'Updated! Cycle stage updated successfully!',
+  cycleStageDeleted: 'Oh-Ho! Cycle stage deleted successfully',
+};
+export const motivationalQuotesToast = {
+  motivationalQuoteAdded: 'Done! Motivational quote added successfully!',
+  motivationalQuoteUpdated: 'Updated! Motivational quote updated successfully!',
+  motivationalQuoteDeleted: 'Oh-Ho! Motivational quote deleted successfully',
+};
+export const cmsToast = {
+  savedTermAndCond: 'Terms locked! Terms and conditions saved successfully!',
+  savedPolicy: 'Privacy saved! Policy saved successfully!',
+  savedOverview: 'Done! Overview saved successfully!',
+  savedInstruction: 'Done! Instruction saved successfully!',
+  savedCycleStages: 'Done! Cycle stages saved successfully!',
+  savedAboutUs: 'Done! About us saved successfully!',
+  faqAdded: 'Done! FAQ added successfully!',
+  faqUpdated: 'Updated! FAQ updated successfully!',
+  faqDeleted: 'Oh-Ho! FAQ deleted successfully',
+};
