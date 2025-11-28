@@ -2,8 +2,8 @@ export const PREF_TOKEN = 'bearerToken';
 export const IS_INTRO = '/';
 export const IS_LOGIN = 'Login';
 // API BASE URL
-// export const BASE_URL = 'https://lezlie-nonferocious-noninferentially.ngrok-free.dev/'; // Aryan
-export const BASE_URL = 'https://expositorily-isanomalous-lilia.ngrok-free.dev/'; // Rishi
+export const BASE_URL = 'https://lezlie-nonferocious-noninferentially.ngrok-free.dev/'; // Aryan
+// export const BASE_URL = 'https://expositorily-isanomalous-lilia.ngrok-free.dev/'; // Rishi
 
 // PAGE_LIMIT
 export const PAGE_LIMIT = 10;
