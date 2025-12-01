@@ -399,7 +399,7 @@ const UserManagementView = () => {
                     <Form.Label className="fs-6 fw-semibold text-muted mb-2">
                       {UserManagementString.age}
                     </Form.Label>
-                    <div className="p-3 rounded-2">
+                      <div className="p-3 bg-light rounded-2">
                       <p className="mb-0">
                         {item.age} {UserManagementString.years}
                       </p>

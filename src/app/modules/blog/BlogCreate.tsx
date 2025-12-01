@@ -150,6 +150,13 @@ const BlogCreate = () => {
                   validation.title ? 'border-danger' : 'border'
                 )}
               />
+              <div className="fv-plugins-message-container">
+                <span className="text-danger fs-12 fw-bold">
+                  {validation.title
+                    ? 'Please enter valid title'
+                    : ''}
+                </span>
+              </div>
             </Col>
             <Col lg={12} className="mb-3 mb-md-3">
               <Form.Label className="fs-6 fw-bold mb-2">
@@ -167,6 +174,13 @@ const BlogCreate = () => {
                   validation.content ? 'border-danger' : 'border'
                 )}
               />
+              <div className="fv-plugins-message-container">
+                <span className="text-danger fs-12 fw-bold">
+                  {validation.content
+                    ? 'Please enter valid content'
+                    : ''}
+                </span>
+              </div>
             </Col>
             <Col lg={6}>
               <FileUpload
@@ -180,6 +194,13 @@ const BlogCreate = () => {
                   validation.image ? 'border-danger' : 'border'
                 )}
               />
+              <div className="fv-plugins-message-container">
+                <span className="text-danger fs-12 fw-bold">
+                  {validation.image
+                    ? 'Please enter valid image'
+                    : ''}
+                </span>
+              </div>
             </Col>
           </Row>
           <div className="d-flex justify-content-end gap-3 mt-6">

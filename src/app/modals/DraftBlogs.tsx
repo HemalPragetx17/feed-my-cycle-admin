@@ -7,7 +7,6 @@ import Loader from '../../Global/loader';
 import p1 from '../../admin/assets/media/svg/default.svg';
 import crossRed from '../../admin/assets/media/svg/cross.red.svg';
 import Method from '../../utils/methods';
-import { on } from 'events';
 interface DraftBlogsModalProps {
   show: boolean;
   onHide: () => void;

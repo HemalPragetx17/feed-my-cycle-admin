@@ -144,6 +144,13 @@ const MotivationalQuoteFormModal: React.FC<MotivationalQuoteFormModalProps> = ({
                 validation.file ? 'border-danger' : 'border'
               )}
             />
+            <div className="fv-plugins-message-container">
+              <span className="text-danger fs-12 fw-bold">
+                {validation.file
+                  ? 'Please enter valid file'
+                  : ''}
+              </span>
+            </div>
           </Form.Group>
         ) : (
           <Form.Group className="mb-4">
@@ -159,7 +166,14 @@ const MotivationalQuoteFormModal: React.FC<MotivationalQuoteFormModalProps> = ({
               placeholder={motivationalQuotesString.quote}
               value={motivationalQuote?.quote}
               onChange={(event: any) => handleChange(event.target.value.trimStart(), 'quote')}
-            />
+              />
+              <div className="fv-plugins-message-container">
+                <span className="text-danger fs-12 fw-bold">
+                  {validation.quote
+                    ? 'Please enter valid quote'
+                    : ''}
+                </span>
+              </div>
           </Form.Group>
         )}
       </Modal.Body>

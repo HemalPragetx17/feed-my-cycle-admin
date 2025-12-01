@@ -121,6 +121,13 @@ const FAQFormModal: React.FC<FAQFormModalProps> = ({
               value={faq?.question}
               onChange={(event: any) => handleChange(event.target.value.trimStart(), 'question')}
             />
+            <div className="fv-plugins-message-container">
+              <span className="text-danger fs-12 fw-bold">
+                {validation.question
+                  ? 'Please enter valid question'
+                  : ''}
+              </span>
+            </div>
           </Form.Group>
           <Form.Group className="mb-4">
             <Form.Label className="required">
@@ -137,6 +144,13 @@ const FAQFormModal: React.FC<FAQFormModalProps> = ({
               value={faq?.answer}
               onChange={(event: any) => handleChange(event.target.value.trimStart(), 'answer')}
             />
+            <div className="fv-plugins-message-container">
+              <span className="text-danger fs-12 fw-bold">
+                {validation.answer
+                  ? 'Please enter valid answer'
+                  : ''}
+              </span>
+            </div>
           </Form.Group>
         </Form>
       </Modal.Body>

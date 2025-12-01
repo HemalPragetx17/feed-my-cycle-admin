@@ -124,6 +124,13 @@ const SymptomFormModal: React.FC<SymptomFormModalProps> = ({
               value={symptom?.option}
               onChange={(event: any) => handleChange(event.target.value.trimStart(), 'option')}
             />
+            <div className="fv-plugins-message-container">
+              <span className="text-danger fs-12 fw-bold">
+                {validation.option
+                  ? 'Please enter valid option'
+                  : ''}
+              </span>
+            </div>
           </Form.Group>
         </Form>
       </Modal.Body>

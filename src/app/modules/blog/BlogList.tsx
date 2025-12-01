@@ -213,11 +213,15 @@ const BlogList = () => {
         ) : (
           <></>
         )}
-        <Col xs={'auto'}>
-          <button className="btn btn-primary" onClick={handleAddClick}>
-            {BlogString.add}
-          </button>
-        </Col>
+        {!fetchLoading ? (
+          <Col xs={'auto'}>
+            <button className="btn btn-primary" onClick={handleAddClick}>
+              {BlogString.add}
+            </button>
+          </Col>
+        ) : (
+          <></>
+        )}
       </Row>
 
       {/* Filters */}
