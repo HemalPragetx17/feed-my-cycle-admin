@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Card, Col, FormLabel, Row } from "react-bootstrap";
+import { Badge, Card, Col, FormLabel, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import ThreeDotMenu from "../../../admin/assets/media/svg/three-dot.svg";
 import { KTSVG } from "../../../admin/helpers";
@@ -566,7 +566,37 @@ const UserManagementList = () => {
                         </td>
                         <td>
                           <span className="fs-15 fw-600 text-dark">
-                            {item.subscription}
+                            <Badge
+                              bg=""
+                              className="fw-bold d-flex align-items-center justify-content-center text-align-center fs-14 h-40px w-85px"
+                              style={{
+                                backgroundColor:
+                                  item?.subscription === UserManagementString.free
+                                    ? "#2013131a"
+                                    : item?.subscription === UserManagementString.weekly
+                                      ? "#27AD4A1A"
+                                      : item?.subscription === UserManagementString.monthly
+                                        ? "#1A73E81A"
+                                        : "#FFA5001A",
+                                color:
+                                  item?.subscription === UserManagementString.free
+                                    ? "#706e08ff"
+                                    : item?.subscription === UserManagementString.weekly
+                                      ? "#27AD4A"
+                                      : item?.subscription === UserManagementString.monthly
+                                        ? "#1A73E8"
+                                        : "#FFA500",
+                                borderRadius: "100px",
+                              }}
+                            >
+                              {item?.subscription === UserManagementString.free
+                                ? UserManagementString.free
+                                : item?.subscription === UserManagementString.weekly
+                                  ? UserManagementString.weekly
+                                  : item?.subscription === UserManagementString.monthly
+                                    ? UserManagementString.monthly
+                                    : UserManagementString.yearly}
+                            </Badge>
                           </span>
                         </td>
                         <td>
