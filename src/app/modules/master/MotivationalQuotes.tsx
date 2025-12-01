@@ -15,7 +15,6 @@ import { useDebounce } from "../../../utils/useDebounce";
 import { CustomSelectTable } from "../../custom/select/CustomSelectTable";
 import CommonDeleteModal from "../../modals/CommonDelete";
 import MotivationalQuoteFormModal from "../../modals/MotivationalQuoteFormModal";
-import ImportMotivationalQuoteModal from "../../modals/ImportMotivationalQuoteModal";
 const options = [
   {
     label: (
@@ -45,7 +44,6 @@ const MotivationalQuotes = () => {
   const [search, setSearch] = useState<string>('');
 
   // Modal states
-  const [importMotivationalQuotesModal, setShowImportMotivationalQuotesModal] = useState<boolean>(false);
   const [motivationalQuotesModal, setShowMotivationalQuotesModal] = useState<boolean>(false);
   const [motivationalQuotesModalTitle, setMotivationalQuotesModalTitle] = useState<string>('');
   const [currentMotivationalQuote, setCurrentMotivationalQuote] = useState<IMotivationalQuotesData | null>(null);
@@ -149,7 +147,6 @@ const MotivationalQuotes = () => {
           <Col md={'auto'} className="text-right mb-5">
             <Button
               onClick={() => {
-                // setShowImportMotivationalQuotesModal(true);
                 setShowMotivationalQuotesModal(true);
                 setMotivationalQuotesModalTitle('Import');
               }}
@@ -286,19 +283,6 @@ const MotivationalQuotes = () => {
           handlePageLimit={handlePageLimit}
         />
       )}
-
-      <ImportMotivationalQuoteModal
-        show={importMotivationalQuotesModal}
-        title={motivationalQuotesModalTitle}
-        handleClose={() => {
-          setShowImportMotivationalQuotesModal(false);
-        }}
-        onHide={async () => {
-          setShowImportMotivationalQuotesModal(false);
-          setPage(1);
-          await fetchMotivationalQuotes(1, pageLimit, search);
-        }}
-      />
 
       <MotivationalQuoteFormModal
         show={motivationalQuotesModal}
